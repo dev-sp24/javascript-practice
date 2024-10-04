@@ -1,0 +1,47 @@
+/* styles.css */
+body {
+    background-color: #f0f0f0;
+}
+
+.tic-tac-sec{
+    width: 400px;
+    margin: 200px auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+}
+
+.cell {
+  
+    background-color: white;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cell.x::before {
+    /* content: "X"; */
+    color: red;
+    font-weight: bold;
+}
+
+.cell.o::before {
+    /* content: "O"; */
+    color: blue;
+    font-weight: bold;
+}
+
