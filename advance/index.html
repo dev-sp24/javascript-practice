@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Example</title>
+  </head>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #212121;
+      color: #fff;
+      font-size: 20px;
+    }
+    .dom-section {
+      padding: 100px;
+    }
+  </style>
+
+  <body>
+    <section class="dom-section">
+      <ul class="language">
+        <li>Html</li>
+        <li>Css</li>
+      </ul>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../dom/dom.js"></script>
+
+    <script>
+      function addlanguage(languageName) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(languageName));
+        document.querySelector(".language").appendChild(li);
+      }
+      addlanguage("javascript");
+      addlanguage("jquery");
+
+      // using jquery
+
+      //  function addlanguage(languageName) {
+      //     const li = $('<li></li>').text(languageName);
+      //     $('.language').append(li);
+      //   }
+
+      //   addlanguage('javascript');
+      //   addlanguage('jquery');
+
+
+
+      // ***** edit language
+      // const newlanguage = document.querySelector("li:nth-child(3)");
+      // newlanguage.innerHTML = "python";
+      //or
+      //  const newtrick = document.createElement("li");
+      //  newtrick.textContent = "react";
+      //  newlanguage.replaceWith(newtrick);
+
+
+
+      // remove language
+      // const removelang = document.querySelector("li:nth-child(1)");
+      // removelang.remove();
+
+    </script>
+  </body>
+</html>
